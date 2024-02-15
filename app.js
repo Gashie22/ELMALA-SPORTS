@@ -6,7 +6,7 @@ const express = require('express')
 const bcrypt = require('bcryptjs')
 const epressLayout = require('express-ejs-layouts')
 const session = require('express-session')
-const connectDB = require('./server/config/db')
+//const connectDB = require('./server/config/db')
 const passport = require('passport')
 const MongoStore=require('connect-mongo')
 //const mondoDBsession = require('connect-mongodb-session')(session)
@@ -15,7 +15,18 @@ const methodOverride = require('method-override')
 //flash mesages
 const flash = require('express-flash')
 //const AuthSchema = require('./server/model/authicate')
+const mongoose= require('mongoose')
+mongoose.set('strictQuery',false)
 
+const connectDB=async ()=>{
+    try{ 
+        const conn= await mongoose.connect(process.env.URI);
+        console.log (`DB connected now`);
+
+    }catch(error){
+        console.log(error)
+    }  
+}
 
 
 //configure express app
