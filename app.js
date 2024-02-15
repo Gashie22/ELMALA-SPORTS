@@ -56,7 +56,7 @@ app.use(methodOverride('_method'));
 app.use(express.static('public'))
 
 
-//engines   
+//engines    
 app.use(epressLayout)
 app.set('layout', './layouts/main')
 app.set('view engine', 'ejs')
