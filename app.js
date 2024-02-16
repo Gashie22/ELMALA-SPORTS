@@ -31,7 +31,7 @@ const connectDB=async ()=>{
 
 //configure express app
 const app = express()
-const port = 'https://elmalapms.onrender.com/' || process.env.PORT
+const port = 5000 || process.env.PORT
 
 //passport middleware
 app.use(session({ 
