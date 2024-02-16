@@ -67,7 +67,7 @@ app.use('/', require('./routes/customer'))
 app.use('/add', require('./routes/customer'))
 
 //auth route
-app.use('/', require('./server/routes/auth'))
+app.use('/', require('./routes/auth'))
 
 app.get('/', async (req, res) => {
     res.render('Users/auth')
