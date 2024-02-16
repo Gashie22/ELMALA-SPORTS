@@ -72,8 +72,8 @@ app.use('/', require('./server/routes/auth'))
 app.get('/', async (req, res) => {
     res.render('Users/auth')
 })
-app.get('/register', async (req, res) => {
-    res.render('Users/register')
+app.get('/register', async (req, res) => { 
+    res.render('Users/register ')
 })
 
 //404 route
